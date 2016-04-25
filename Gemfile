@@ -5,3 +5,4 @@ gem "codeclimate-test-reporter", group: :test, require: nil
 gem "bundler"
 gem "rspec"
 gem "rake"
+gem "travis"
