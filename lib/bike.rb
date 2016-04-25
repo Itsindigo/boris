@@ -14,4 +14,8 @@ class Bike
   def report_broken
     @bike_status = "Broken"
   end
+
+  def in_transit
+    @bike_status = "In Transit"
+  end
 end

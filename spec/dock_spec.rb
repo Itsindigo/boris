@@ -3,8 +3,8 @@ require 'dock'
 RSpec.describe Dock do
 
   subject(:dock) {described_class.new}
-  let(:bike) { double Bike.new, :bike_status => "Working"}
-  let(:broken_bike) { double Bike.new, :bike_status => "Broken"}
+  let(:bike) { double Bike.new, bike_status: "Working"}
+  let(:broken_bike) { double Bike.new, bike_status: "Broken"}
 
   describe 'Bike Management' do
 
@@ -25,7 +25,7 @@ RSpec.describe Dock do
     end
 
     it "should release a bike" do
-      1.times {dock.dock_bike(bike)}
+      dock.dock_bike(bike)
       expect{dock.release_bike}.to change{dock.bikes.count}.by(-1)
     end
 
