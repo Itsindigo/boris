@@ -13,7 +13,7 @@ class RepairVan
     dock.broken_bikes.each do |bike|
       @stored_bikes << bike
     end
-    # update_stored_bikes
+    update_stored_bikes
   end
 
   private
